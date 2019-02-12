@@ -18,13 +18,13 @@ suppressWarnings(suppressMessages(library(tictoc,quietly=TRUE)))
 id_panel=c(1,3,5,6,7,8,10,
            11,12,13,14,15,
            17,19,20)                          # IDs of panelists
-nick_panel=c("Crist","Sol","Agnés","Mercé",
+nick_panel=c("Crist","Sol","Agnès","Mercè",
              "Ester","Tere","AnnaB","AnaCr",
              "Bene","Hay","Jean","MJose",
              "Mont","Ruth","Yol")             # Names of panelists  
                                               # matching IDs
 
-PLeader_1="Mercé"                             # Leaders of panel 1 and 2
+PLeader_1="Mercè"                             # Leaders of panel 1 and 2
 PLeader_2="AnaCR"
 
 ########################################################################
@@ -87,6 +87,18 @@ process_outliers=function(){
   aux=unlist(stri_split_fixed(str=codigos,pattern=": ",n=2))
   dim(aux)=c(2,length(aux)/2)
   aux[1,]=toupper(aux[1,])
+  
+  # Check if any code is wrong (if it appears less than 3 times)
+  # Can be immediately changed
+  
+  numcods=a$Código
+  if (length(which(table(numcods)<3))>0){
+    cat("There are some wrong codes\n")
+    cat("Number of repetitions per code: \n")
+    print(table(numcods))
+    a$Código=fix(numcods)
+  }
+  
   cods=sapply(1:dim(a)[1],function(x){
     i=which(aux[1,]==toupper(a$Código[x]))
     a$Código[x]=aux[2,i]

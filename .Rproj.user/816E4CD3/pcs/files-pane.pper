@@ -1,0 +1,9 @@
+{
+    "path" : "//192.168.5.245/Data/Estadistica/Ander/RTests/Outlier Detection/outlierdetection",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
