@@ -1,2 +1,2 @@
-#Hello, welcome to the outlier detector
-Hello
+# HELLO
+This is my readme file
