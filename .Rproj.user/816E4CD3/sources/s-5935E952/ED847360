@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1549980991620.000,
+    "dirty" : false,
+    "encoding" : "ISO8859-1",
+    "folds" : "",
+    "hash" : "1347593429",
+    "id" : "ED847360",
+    "lastKnownWriteTime" : 1549980904,
+    "last_content_update" : 1549980904,
+    "path" : "//192.168.5.245/Data/Estadistica/Ander/RTests/Outlier Detection/outlierdetection.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
